@@ -7,7 +7,7 @@ This project was built as part of Jonas Schmedtmann's Ultimate React Course.
 ## 🔗 Live Demo
 
 The project is live and deployed on Vercel. You can check it out here:
-👉 **[usepopcorn-aav9.vercel.app](https://usepopcorn-aav9.vercel.app)**
+👉 **[usepopcorn-aav9.vercel.app](https://usepopcorn-gilt-seven.vercel.app/)**
 
 ---
 
