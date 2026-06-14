@@ -5,7 +5,6 @@ import Loader from './Loader'
 export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [movie, setMovie] = useState({})
   const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState('')
   const [userRating, setUserRating] = useState('')
   const watchedUserRating = watched.find((movie) => movie.imdbID === selectedId)?.userRating
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId)
@@ -47,7 +46,7 @@ export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, wa
           const data = await res.json()
           setMovie(data)
         } catch (err) {
-          setError(err.message)
+          console.log(err.message)
         } finally {
           setIsLoading(false)
         }
