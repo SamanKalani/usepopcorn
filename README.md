@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🍿 usePopcorn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek, feature-rich React Single Page Application (SPA) that allows users to search for movies, read detailed descriptions, rate them using a custom star component, and maintain a personal watched movies list with auto-calculated statistics.
 
-## Available Scripts
+This project was built as part of Jonas Schmedtmann's Ultimate React Course.
 
-In the project directory, you can run:
+## 🔗 Live Demo
 
-### `npm start`
+The project is live and deployed on Vercel. You can check it out here:
+👉 **[usepopcorn-aav9.vercel.app](https://usepopcorn-aav9.vercel.app)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- **Live Movie Search:** Fetches real-time movie data seamlessly from the OMDb API.
+- **Detailed Movie Views:** Displays genres, plot summaries, runtime, directors, and actors for selected titles.
+- **Custom Star Rating Component:** A highly reusable UI component built to capture user ratings.
+- **Personal Watchlist Management:** Add, track, or delete movies from your custom "Watched" list.
+- **Dynamic Stats:** Automatically calculates your personal average user rating, IMDb score, and total runtime for watched movies.
+- **Persistent Storage:** Uses `localStorage` to save your watchlist data so it persists across page refreshes.
+- **Advanced Hook Patterns:** Implements clean `useEffect`, `useState`, and `useRef` flows to handle keyboard shortcuts (Escape key), active tab titles, and network race conditions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React.js** (Core Library)
+- **JavaScript (ES6+)**
+- **CSS3** (Custom UI/UX styling)
+- **OMDb API** (External Movie Database)
+- **Vercel** (Production Hosting & CI/CD Pipeline)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Local Installation & Setup
 
-### `npm run eject`
+Want to run this project locally on your machine? Follow these simple steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone [https://github.com/SamanKalani/usepopcorn.git](https://github.com/SamanKalani/usepopcorn.git)
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate into the project folder:
+   cd usepopcorn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3.Install the project dependencies:
+npm install
 
-## Learn More
+4. Start the development server:
+   npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Open your browser and head over to http://localhost:3000 to view the app!
