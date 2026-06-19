@@ -1,8 +1,6 @@
 # 🍿 usePopcorn
 
-A sleek, feature-rich React Single Page Application (SPA) that allows users to search for movies, read detailed descriptions, rate them using a custom star component, and maintain a personal watched movies list with auto-calculated statistics.
-
-This project was built as part of Jonas Schmedtmann's Ultimate React Course.
+A full responsive sleek, feature-rich React Single Page Application (SPA) that allows users to search for movies, read detailed descriptions, rate them using a custom star component, and maintain a personal watched movies list with auto-calculated statistics.
 
 ## 🔗 Live Demo
 

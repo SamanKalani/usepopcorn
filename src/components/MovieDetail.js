@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react'
 import StarRating from '../StarRating'
 import Loader from './Loader'
 
-export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, watched }) {
+export default function MovieDetail({
+  selectedId,
+  onMinimizeMovie,
+  onCloseMovie,
+  onAddWatched,
+  watched,
+}) {
   const [movie, setMovie] = useState({})
   const [isLoading, setIsLoading] = useState(false)
   const [userRating, setUserRating] = useState('')
@@ -31,9 +37,9 @@ export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, wa
       userRating,
     }
     onAddWatched(newMovie)
-    onCloseMovie()
   }
   const key = '365a9c6a'
+  // useEffect is used to fetch the movie details when the selectedId changes, the movie details are stored in the movie state, and the loading state is set to true while the data is being fetched, and set to false when the data is fetched or if there is an error, the error is caught and logged to the console
   useEffect(
     function () {
       async function getMovieDetails() {
@@ -44,6 +50,7 @@ export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, wa
           if (!res.ok) throw new Error('we have some problem with fetching data')
 
           const data = await res.json()
+          //data logs looks like: {Title: 'movie1', Year: '2020', imdbID: 'id1', Type: 'movie', Poster: 'url1', Runtime: '120 min', imdbRating: '7.5', Plot: 'plot of the movie', Released: '01 Jan 2020', Actors: 'actor1, actor2, actor3', Director: 'director1', Genre: 'genre1, genre2'}
           setMovie(data)
         } catch (err) {
           console.log(err.message)
@@ -55,6 +62,8 @@ export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, wa
     },
     [selectedId]
   )
+
+  // useEffect is used to change the document title to the movie title when the movie is selected, and change it back to 'usePopcorn' when the movie is closed
   useEffect(
     function () {
       if (!title) return
@@ -67,6 +76,7 @@ export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, wa
     [title]
   )
 
+  // useEffect is used to add an event listener to the document that listens for the 'Escape' key, when the 'Escape' key is pressed, the onCloseMovie function is called, the event listener is removed when the component unmounts
   useEffect(
     function () {
       function callBack(e) {
@@ -113,9 +123,6 @@ export default function MovieDetail({ selectedId, onCloseMovie, onAddWatched, wa
               </p>
             </div>
           </header>
-
-          {/* <p>{avgRating}</p> */}
-
           <section>
             <div className="rating">
               {!isWatched ? (

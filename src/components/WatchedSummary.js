@@ -27,7 +27,7 @@ export default function WatchedSummary({ watched }) {
         </p>
         <p>
           <span>⏳</span>
-          <span>{Math.round(avgRuntime)} min</span>
+          <span>{avgRuntime.toFixed(0)} min</span>
         </p>
       </div>
     </div>

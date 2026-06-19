@@ -1,6 +1,6 @@
-export default function WatchedMovie({ movie, onDeleteWatched }) {
+export default function WatchedMovie({ movie, onDeleteWatched, onSelectMovie }) {
   return (
-    <li>
+    <li onClick={() => onSelectMovie(movie.imdbID)}>
       <img
         src={movie.poster}
         alt={`${movie.title} poster`}
@@ -24,7 +24,14 @@ export default function WatchedMovie({ movie, onDeleteWatched }) {
           <span>⏳</span>
           <span>{movie.runtime} min</span>
         </p>
-        <button onClick={() => onDeleteWatched(movie.imdbID)} className="btn-delete">
+        <button
+          onClick={(e) => {
+            // stopPropagation is used to prevent the onSelectMovie function from being called when the delete button is clicked, and the onDeleteWatched function is called with the movie's imdbID to delete the movie from the watched list
+            e.stopPropagation()
+            onDeleteWatched(movie.imdbID)
+          }}
+          className="btn-delete"
+        >
           X
         </button>
       </div>

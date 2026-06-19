@@ -1,4 +1,5 @@
 export default function Movie({ movie, onSelectMovie }) {
+  //movie is looks like: {Title: 'movie1', Year: '2020', imdbID: 'id1', Type: 'movie', Poster: 'url1'}
   return (
     <li onClick={() => onSelectMovie(movie.imdbID)}>
       <img
